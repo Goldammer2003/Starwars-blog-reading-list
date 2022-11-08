@@ -1,7 +1,9 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			people: []
+			characters: [],
+			planets: [],
+			vehicles: []
 		},
 		actions: {
 
@@ -9,16 +11,36 @@ const getState = ({ getStore, getActions, setStore }) => {
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
-			loadSomeData: () => {
+			loadDataOfCharacters: () => {
 				
 					fetch ("https://swapi.dev/api/people", {
 						method:"GET", 
 						headers: {"Content-Type":"application/json"}
 					})
 					.then (response =>response.json())
-					.then (data =>setStore({people:data}) )
+					.then (charactersdata =>setStore({characters:charactersdata}) )
 					
 				
+					
+			},
+
+			loadDataOfPlanets: () => {
+				fetch ("https://swapi.dev/api/planets",{
+					method:"GET",
+					headers: {"Content-Type":"application/json"}
+				})
+				.then (response =>response.json () )
+				.then (planetdata => setStore({planets:planetdata}))
+			},
+
+
+			loadDAtaOfVehicles: () => {
+				fetch ("https://swapi.dev/api/vehicles", {
+					method:"GET", 
+					headers: {"Content-Type":"application/json"}
+				})
+				.then (response =>response.json ())
+				.then (vehiclesdata =>setStore({vehicles:vehiclesdata}))
 			},
 			changeColor: (index, color) => {
 				//get the store

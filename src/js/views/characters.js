@@ -1,10 +1,10 @@
 import React, {useState,useContext, useEffect} from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
-import Card from "../component/card";
+//import Card from "../component/card";
 import {Context} from "../store/appContext"
 
-export const Home = () => {
+export const Characters = () => {
 	const {store, actions} = useContext(Context)
 	console.log("hello",store)
 
@@ -15,7 +15,7 @@ export const Home = () => {
       			
 		
 			
-			 {store.people.results && store.people.results.map((item,index)=>{
+			 {store.characters.results && store.characters.results.map((item,index)=>{
 
           return (
 			<div className="card-group">
