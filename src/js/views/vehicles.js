@@ -4,7 +4,12 @@ export const Vehicles = () => {
     const {store, actions} = useContext(Context)
     console.log (store)
 return (
-    <div>
+  <div>
+  <div>
+        <h1 className="title">Vehicles</h1>
+      </div>
+    <div className= "d-flex scrolbar">
+      
         {store.vehicles.results && store.vehicles.results.map((item,index)=> {
                  return (
                     <div className="card-group">
@@ -15,6 +20,7 @@ return (
                       <p className="card-text">name: {item.name} </p>
                       <p className ="card-text">passangers: {item.passangers}</p>
                       <a href="#" className="btn btn-primary">Go somewhere</a>
+                      <button onClick={()=>actions.addFavouritestoList(item.name)} className="btn btn-outline-warning ms-5"><i class="far fa-heart "></i></button>
                     </div>
                     </div>
                     </div>
@@ -22,6 +28,7 @@ return (
                         
                   )
         })}
+    </div>
     </div>
 )
 }

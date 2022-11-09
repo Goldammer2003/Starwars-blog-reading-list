@@ -1,0 +1,14 @@
+.scrolbar {
+  margin: 4px, 4px;
+  padding: 4px;
+  border-radius: 40px;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+
+.title {
+    color:red;
+}

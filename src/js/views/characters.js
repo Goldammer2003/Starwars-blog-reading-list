@@ -10,14 +10,19 @@ export const Characters = () => {
 
 	
 	return (
-		<div className="text-center mt-5 row container">
-			 <div className="col-md-8">
+		//<div className="text-center mt-5 row container">
+    <>
+    <div><h1 className="title">Characters</h1></div>
+			 <div className=" d-flex scrolbar">
       			
 		
 			
 			 {store.characters.results && store.characters.results.map((item,index)=>{
 
           return (
+          
+            <div className="d-flex">
+              {/*<div></div>*/}
 			<div className="card-group">
  <div className="card" style={{ width : '18rem' }}>
             <img src="..." className="card-img-top" alt="..."/>
@@ -26,16 +31,18 @@ export const Characters = () => {
               <p className="card-text">height: {item.height} </p>
               <p className ="card-text">Hair-color: {item.hair_color}</p>
               <a href="#" className="btn btn-primary">Go somewhere</a>
+              <button className="btn btn-outline-warning ms-5"><i class="far fa-heart "></i></button>
             </div>
             </div>
 			</div>
-           
+      </div> 
+        
                 
           )
         })}
 			
 
 	</div>
-	</div> 
-	
+	 
+	</> 
 	)}

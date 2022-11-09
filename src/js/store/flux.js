@@ -3,7 +3,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			characters: [],
 			planets: [],
-			vehicles: []
+			vehicles: [],
+			favouritecards: []
 		},
 		actions: {
 
@@ -42,6 +43,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.then (response =>response.json ())
 				.then (vehiclesdata =>setStore({vehicles:vehiclesdata}))
 			},
+
+			addFavouritestoList: (favourites) => {
+				const newFavourite =getStore.favouritecards;
+				newFavourite.push(favourites)
+				setStore ({favouritecards:newFavourite})
+			},
+
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();
