@@ -19,7 +19,7 @@ return (
                       <h5 className="card-title">{item.name}</h5>
                       <p className="card-text">name: {item.name} </p>
                       <p className ="card-text">passangers: {item.passangers}</p>
-                      <a href="#" className="btn btn-primary">Go somewhere</a>
+                      <a href="#" className="btn btn-primary">Learn more!</a>
                       <button onClick={()=>actions.addFavouritestoList(item.name)} className="btn btn-outline-warning ms-5"><i class="far fa-heart "></i></button>
                     </div>
                     </div>

@@ -16,7 +16,7 @@ return (
                       <p className="card-text">population: {item.population} </p>
                       <p className ="card-text">terrain: {item.terrain}</p>
                       <a href="#" className="btn btn-primary">Go somewhere</a>
-                      <button className="btn btn-outline-warning ms-5"><i class="far fa-heart "></i></button>
+                      <button  onClick={()=>actions.addFavouritestoList(item.name)} className="btn btn-outline-warning ms-5"><i class="far fa-heart "></i></button>
                     </div>
                     </div>
                     </div>

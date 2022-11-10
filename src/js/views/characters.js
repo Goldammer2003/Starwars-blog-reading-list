@@ -31,7 +31,7 @@ export const Characters = () => {
               <p className="card-text">height: {item.height} </p>
               <p className ="card-text">Hair-color: {item.hair_color}</p>
               <a href="#" className="btn btn-primary">Go somewhere</a>
-              <button className="btn btn-outline-warning ms-5"><i class="far fa-heart "></i></button>
+              <button onClick={()=>actions.addFavouritestoList(item.name)} className="btn btn-outline-warning ms-5"><i class="far fa-heart "></i></button>
             </div>
             </div>
 			</div>
