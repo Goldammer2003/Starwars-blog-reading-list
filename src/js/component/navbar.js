@@ -9,38 +9,33 @@ export const Navbar = () => {
         <span className="navbar-brand mb-0 h1">React Boilerplate</span>
       </Link>
       <div className="ml-auto">
-        <Link to="/demo">
-          <div class="dropdown">
-            <button
-              class="btn btn-primary dropdown-toggle px-3"
-              type="button"
-              id="dropdownMenuButton1"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Favorites
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              {store.favouritecards.length > 0
-                ? store.favouritecards.map((item, index) => {
-                    return (
-                      <li className="navbar" key={index}>
-                        <a class="dropdown-item" href="#">
-                          {item}
-                        </a>
-                        <i
-                          onClick={() => {
-                            actions.deleteFavouriteItem(index);
-                          }}
-                          class="fa-solid fa-trash"
-                        ></i>
-                      </li>
-                    );
-                  })
-                : "loading"}
-            </ul>
-          </div>
-        </Link>
+        <div class="dropdown me-5">
+          <button
+            class="btn btn-primary dropdown-toggle px-3"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Favorites
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            {store.favouritecards.length > 0
+              ? store.favouritecards.map((item, index) => {
+                  return (
+                    <li className="" key={index}>
+                      <a className="dropdown-item" href="#">
+                        {item}
+                      </a>
+                      <button onClick={() => actions.deleteFavouriteItem(index)}>
+                        <i className="fas fa-trash"></i>
+                      </button>
+                    </li>
+                  );
+                })
+              : "loading"}
+          </ul>
+        </div>
       </div>
     </nav>
   );
