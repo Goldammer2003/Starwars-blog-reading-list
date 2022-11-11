@@ -47,12 +47,11 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
 
       deleteFavouriteItem: (index) => {
-		console.log("this is the index",index)
-       store = getStore()
-	   store.favouritecards.filter(
-          (item, i) =>  index != i
-        )
-        setStore(store);
+        console.log("this is the store", getStore());
+        let newFavouritecards = getStore().favouritecards.filter(
+          (item, i) => index != i
+        );
+        setStore({ favouritecards: newFavouritecards });
       },
 
       changeColor: (index, color) => {
