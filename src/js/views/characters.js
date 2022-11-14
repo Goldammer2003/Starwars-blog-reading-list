@@ -3,11 +3,13 @@ import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 //import Card from "../component/card";
 import {Context} from "../store/appContext"
+import {Link } from "react-router-dom"; 
+import { useParams } from "react-router-dom";
 
 export const Characters = () => {
 	const {store, actions} = useContext(Context)
 	console.log("hello",store)
-
+  const params = useParams();
 	
 	return (
 		//<div className="text-center mt-5 row container">
@@ -30,7 +32,7 @@ export const Characters = () => {
               <h5 className="card-title">{item.name}</h5>
               <p className="card-text">height: {item.height} </p>
               <p className ="card-text">Hair-color: {item.hair_color}</p>
-              <a href="#" className="btn btn-primary">Learn more!</a>
+              <Link to={"/learnMore/"+params.theid} className="btn btn-primary">Learn more!</Link>
               <button onClick={()=>actions.addFavouritestoList(item.name)} className="btn btn-outline-warning ms-5"><i class="far fa-heart "></i></button>
             </div>
             </div>

@@ -17,7 +17,7 @@ export const Navbar = () => {
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Favorites
+            Favorites  {store.favouritecards.length}
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             {store.favouritecards.length > 0
@@ -25,8 +25,10 @@ export const Navbar = () => {
                   return (
                     <li className="" key={index}>
                       <a className="dropdown-item" href="#">
-                        {item}
+                        {item} 
+                       
                       </a>
+                     
                       <button onClick={() => actions.deleteFavouriteItem(index)}>
                         <i className="fas fa-trash"></i>
                       </button>
@@ -35,6 +37,7 @@ export const Navbar = () => {
                 })
               : "loading"}
           </ul>
+        
         </div>
       </div>
     </nav>
