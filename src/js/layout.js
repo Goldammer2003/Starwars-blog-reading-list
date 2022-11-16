@@ -11,7 +11,7 @@ import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { Planets } from "./views/planet";
 import { Vehicles } from "./views/vehicles";
-import { CountingforLearnMorePage } from "./views/details";
+import {Individualpageinformation} from "./views/details";
 
 //create your first component
 const Layout = () => {
@@ -37,7 +37,7 @@ const Layout = () => {
               <Single />
             </Route>
             <Route exact path="/learnMore/:theid">
-              <CountingforLearnMorePage/>
+              <Individualpageinformation/>
             </Route>
             <Route>
               <h1>Not found!</h1>

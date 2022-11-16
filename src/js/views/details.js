@@ -2,7 +2,7 @@ import React,{useContext} from "react";
 import { useParams } from "react-router-dom";
 import {Context} from "../store/appContext";
 
-export const CountingforLearnMorePage = () => {
+export const Individualpageinformation = () => {
     const {store}=useContext (Context)
     const params = useParams();
     console.log("hey",store.characters?.results[params.theid])
@@ -14,7 +14,7 @@ export const CountingforLearnMorePage = () => {
 
       </div> 
       </div>
-      <div className="row text-danger container">
+      <div className="row  text-center text-danger container">
         <div className="col"> Name <p>{InformationforCharactersinLearnMore.name}</p> </div>
         <div className="col"> Birth Year<p>{InformationforCharactersinLearnMore.birth_year}</p></div>
         <div className="col"> Gender <p>{InformationforCharactersinLearnMore.gender}</p></div>
