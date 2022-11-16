@@ -12,6 +12,8 @@ import { Footer } from "./component/footer";
 import { Planets } from "./views/planet";
 import { Vehicles } from "./views/vehicles";
 import {IndividualpageinformationCharacters} from "./views/details";
+import { IndividualpageinformationforPlanets } from "./views/detailsPlanets";
+import {IndividualpageinformationforVehicles } from "./views/detailsVehicles";
 
 //create your first component
 const Layout = () => {
@@ -40,12 +42,12 @@ const Layout = () => {
               <IndividualpageinformationCharacters/>
             </Route>
             <Route exact path="/learnMore/planets/:theid">
-              <IndividualpageinformationPlanets/>
+              <IndividualpageinformationforPlanets/>
             </Route>
 
 
             <Route exact path="/learnMore/vehicles/:theid">
-              <IndividualpageinformationVehicles/>
+              <IndividualpageinformationforVehicles/>
             </Route>
 
             <Route>
