@@ -6,11 +6,12 @@ import {Context} from "../store/appContext"
 import {Link } from "react-router-dom"; 
 import { useParams } from "react-router-dom";
 
+
 export const Characters = () => {
 	const {store, actions} = useContext(Context)
-	console.log("hello",store)
+	
   const params = useParams();
-	console.log (store)
+	
 	return (
 		//<div className="text-center mt-5 row container">
     <>
@@ -20,7 +21,7 @@ export const Characters = () => {
 		
 			
 			 {store.characters.results && store.characters.results.map((item,index)=>{
-
+console.log (item)
           return (
           
             <div className="d-flex">

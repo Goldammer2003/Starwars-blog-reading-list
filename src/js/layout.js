@@ -11,10 +11,10 @@ import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { Planets } from "./views/planet";
 import { Vehicles } from "./views/vehicles";
-import {IndividualpageinformationCharacters} from "./views/details";
+import {IndividualpageinformationCharacters} from "./views/detailsCharacters";
 import { IndividualpageinformationforPlanets } from "./views/detailsPlanets";
 import {IndividualpageinformationforVehicles } from "./views/detailsVehicles";
-
+import { Home } from "./views/home";
 //create your first component
 const Layout = () => {
   //the basename is used when your project is published in a subdirectory and not in the root of the domain
@@ -28,9 +28,7 @@ const Layout = () => {
           <Navbar />
           <Switch>
             <Route exact path="/">
-              <Characters />
-              <Planets />
-              <Vehicles />
+              <Home/>
             </Route>
             <Route exact path="/demo">
               <Demo />
