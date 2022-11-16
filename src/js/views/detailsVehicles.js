@@ -2,7 +2,9 @@ import React,{useContext} from "react";
 import { useParams } from "react-router-dom";
 import {Context} from "../store/appContext";
 
-export const Individualpageinformation = () => {
+
+
+export const IndividualpageinformationforVehicles = () => {
     const {store}=useContext (Context)
     const params = useParams();
     console.log("hey",store.characters?.results[params.theid])
@@ -15,17 +17,16 @@ export const Individualpageinformation = () => {
       </div> 
       </div>
       <div className="row  text-center text-danger container">
-        <div className="col"> Name <p>{InformationforCharactersinLearnMore.name}</p> </div>
-        <div className="col"> Birth Year<p>{InformationforCharactersinLearnMore.birth_year}</p></div>
-        <div className="col"> Gender <p>{InformationforCharactersinLearnMore.gender}</p></div>
-        <div className="col"> Height <p>{InformationforCharactersinLearnMore.height}</p></div>
-        <div className="col"> Skin Color <p>{InformationforCharactersinLearnMore.skin_color}</p></div>
-        <div className="col"> Eye Color<p>{InformationforCharactersinLearnMore.eye_color}</p> </div>
+        <div className="col"> Name <p>{InformationforVehiclesinLearnMore.name}</p> </div>
+        <div className="col"> Model<p>{InformationforVehiclesinLearnMore.model}</p></div>
+        <div className="col"> Manufacturer <p>{InformationforVehiclesinLearnMore.manufacturer}</p></div>
+        <div className="col"> Cost in credits <p>{InformationforVehiclesinLearnMore.cost_in_credits}</p></div>
+        <div className="col"> Crew <p>{InformationforVehiclesinLearnMore.crew}</p></div>
+        <div className="col"> Passangers<p>{InformationforVehiclesinLearnMore.passangers}</p></div>
       </div>
          </div>
     
 }
-
 
 
 

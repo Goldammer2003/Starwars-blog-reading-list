@@ -32,7 +32,7 @@ export const Characters = () => {
               <h5 className="card-title">{item.name}</h5>
               <p className="card-text">height: {item.height} </p>
               <p className ="card-text">Hair-color: {item.hair_color}</p>
-              <Link to={"/learnMore/"+index} className="btn btn-primary">Learn more!</Link>
+              <Link to={"/learnMore/characters/"+index} className="btn btn-primary">Learn more!</Link>
               <button onClick={()=>actions.addFavouritestoList(item.name)} className="btn btn-outline-warning ms-5"><i class="far fa-heart "></i></button>
             </div>
             </div>
