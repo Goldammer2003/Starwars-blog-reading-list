@@ -7,7 +7,7 @@ export const IndividualpageinformationforPlanets = () => {
     const {store}=useContext (Context)
     const params = useParams();
     console.log("hey",store.planets?.results[params.theid])
-    const InformationforCharactersinLearnMore = store.planets?.results[params.theid]
+    const InformationforPlanetsinLearnMore = store.planets?.results[params.theid]
     return <div className="container">
         <div className="d-flex border-bottom border-danger pb-5"> <img className="individualpagepictures"src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png"></img>
       <div> <h1>{InformationforCharactersinLearnMore.name}</h1> 
@@ -16,7 +16,7 @@ export const IndividualpageinformationforPlanets = () => {
       </div> 
       </div>
       <div className="row  text-center text-danger container">
-        <div className="col"> Name <p>{InformationforPlanetssinLearnMore.name}</p> </div>
+        <div className="col"> Name <p>{InformationforPlanetsinLearnMore.name}</p> </div>
         <div className="col"> Climate<p>{InformationforPlanetsinLearnMore.climate}</p></div>
         <div className="col"> Population <p>{InformationforPlanetsinLearnMore.population}</p></div>
         <div className="col"> Orbital Period <p>{InformationforPlanetsinLearnMore.orbital_period}</p></div>
