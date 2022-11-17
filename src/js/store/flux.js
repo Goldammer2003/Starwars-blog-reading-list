@@ -7,6 +7,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       planets: [],
       vehicles: [],
       favouritecards: [],
+      baseImgUrl: "https://starwars-visualguide.com/assets/img"
     },
     actions: {
       // Use getActions to call a function within a fuction

@@ -15,11 +15,11 @@ return (
                  return (
                     <div className="card-group">
          <div className="card" style={{ width : '18rem' }}>
-                    <img src="..." className="card-img-top" alt="..."/>
+                    <img src={`${store.baseImgUrl}/vehicles/${index + 1}.jpg`} className="card-img-top" alt="..."/>
                     <div className="card-body">
                       <h5 className="card-title">{item.name}</h5>
                       <p className="card-text">name: {item.name} </p>
-                      <p className ="card-text">passangers: {item.passangers}</p>
+                      <p className ="card-text">passengers: {item.passengers}</p>
                       <Link to={"/learnMore/vehicles/"+index} className="btn btn-primary">Learn more!</Link>
                       <button onClick={()=>actions.addFavouritestoList(item.name)} className="btn btn-outline-warning ms-5"><i class="far fa-heart "></i></button>
                     </div>
